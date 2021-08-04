@@ -10,7 +10,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={FirstPage}></Route>
           <Route path="/login" exact component={LoginPage}></Route>
-          <Route path="/start" exact component={MainPage}></Route>
+          <Route path="/start" exact component={FirstPage}></Route>
         </Switch>
       </BrowserRouter>
     </div>
