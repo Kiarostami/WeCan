@@ -1,9 +1,11 @@
 import React from 'react';
 import './Login.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import AppContext from './AppContext';
 function Login() {
     const [users, setUsers] = useState(null);
+    const info = useContext(AppContext);
     useEffect(()=>{
         fetch('data.json',
              {
@@ -25,15 +27,15 @@ function Login() {
     const login = () => {
         let match = users.filter((user) => 
             (user.username === name && user.password === pass))
-        console.log(users);
-        console.log(match);
         if(match.length === 0){
-            console.log("no");
             setCheckuser(false);
         }
         else{
-            console.log("yes");
             setCheckuser(true);
+            info.setGname(users[0].username);
+            info.setGemail(users[0].email);
+            info.setGstart(users[0].startDay);
+            info.setGgoals(users[0].goals);
             history.push("/start")
         }
     }
