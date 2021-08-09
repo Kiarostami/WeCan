@@ -36,6 +36,14 @@ function Login() {
             info.setGemail(users[0].email);
             info.setGstart(users[0].startDay);
             info.setGgoals(users[0].goals);
+            let sDay = Date.parse(users[0].startDay);
+            let today = new Date();
+            let y = today.getFullYear();
+            let m = today.getMonth() + 1;
+            let d = today.getDate();
+            let currentDate = y + "-" + m + "-" + d;
+            let cDay = Date.parse(currentDate);
+            info.setGdays(Math.ceil((cDay - sDay) / (1000 * 60 * 60 * 24)));
             history.push("/start")
         }
     }

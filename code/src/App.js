@@ -11,8 +11,9 @@ function App() {
   const [gemail, setGemail] = useState(null);
   const [gstart, setGstart] = useState(null);
   const [ggoals, setGgoals] = useState(null);
-  const userInfo = {name: gname, email: gemail, startDay: gstart, goals:ggoals, 
-                    setGname, setGemail, setGstart, setGgoals};
+  const [gdays, setGdays] = useState(null);
+  const userInfo = {name: gname, email: gemail, startDay: gstart, days: gdays, goals:ggoals, 
+                    setGname, setGemail, setGstart, setGdays, setGgoals};
   return (
     <AppContext.Provider value={userInfo}>
       <div className="App">
