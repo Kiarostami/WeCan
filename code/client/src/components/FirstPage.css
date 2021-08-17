@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Overlock&family=Rancho&display=swap');
+.first-cont{
+    background-image: url("../images/first-page.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.desc{
+    margin-left: 5vw;
+    font-size: 2vw;
+    
+    border-radius: 1vw;
+    padding: 3vw;
+}
+.hero-txt{
+    font-family: 'Rancho', cursive;
+    letter-spacing: 2px;
+}
+#logo-txt{
+    background-color: #01236a;
+    color: rgb(236, 236, 236);
+    padding: 1vw;
+    border-radius: 1vw;
+    
+}
+.start-btn{
+    padding: 1vw;
+    margin-top: 5vh;
+    background-color: transparent;
+    border: 1px solid rgb(20, 20, 20);
+    font-size: 2vw;
+    font-family: 'Overlock', cursive;
+    transition: background-color ease 0.7s, color ease 0.7s ;
+}
+.start-btn:hover{
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+@media  screen and (min-width: 768px) {
+    .desc{
+        margin-left: 10vw;
+    }
+    
+}
+@media screen and (min-width: 1024px) {
+    .desc{
+        font-size: 1.7vw;
+    }
+    .first-cont{
+        background-size: cover;
+    }
+    .start-btn{
+        margin-top: 10vh;
+        font-size: 1.7vw;
+    }
+    
+}

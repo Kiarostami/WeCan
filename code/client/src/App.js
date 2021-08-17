@@ -4,16 +4,24 @@ import FirstPage from './components/FirstPage';
 import MainPage from './pages/MainPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage'
-import { useState } from 'react'
+import { useState, useEffect } from 'react';
 import AppContext from './components/AppContext';
+import Axios from 'axios';
+
 function App() {
+  const [users, setUsers] = useState([]);
   const [gname, setGname] = useState(null);
   const [gemail, setGemail] = useState(null);
   const [gstart, setGstart] = useState(null);
   const [ggoals, setGgoals] = useState(null);
   const [gdays, setGdays] = useState(null);
-  const userInfo = {name: gname, email: gemail, startDay: gstart, days: gdays, goals:ggoals, 
+  const userInfo = {users: users, name: gname, email: gemail, startDay: gstart, days: gdays, goals:ggoals, 
                     setGname, setGemail, setGstart, setGdays, setGgoals};
+  useEffect(()=>{Axios.get("http://localhost:3001/api/get").then((response) => {
+                setUsers(response.data);})
+  }, []);
+  console.log("ok")
+  console.log(users);
   return (
     <AppContext.Provider value={userInfo}>
       <div className="App">

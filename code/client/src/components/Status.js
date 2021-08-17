@@ -4,6 +4,7 @@ import AppContext from './AppContext';
 import { useContext, useState, useEffect } from 'react';
 function Status() {
     const [imgsrc, setImgsrc] = useState(null);
+    const info = useContext(AppContext);
     useEffect(() => {
         if(info.days < 7)
             setImgsrc("sick.png");
@@ -15,16 +16,26 @@ function Status() {
             setImgsrc("pre-healthy.png");
         else
             setImgsrc("healthy.png");
-    }, [])
-    const info = useContext(AppContext);
+    }, [info.startDay])
+    const restart = () =>{
+        info.setGstart(new Date);
+        info.setGdays(0);
+    }
     return (
         <div>
             <div className="stat-container">
                 <div className="lung-container">
-                    <img className="lung-img" src={"images/" + imgsrc} alt="not found"></img>
+                    <img className="lung-item lung-img" src={"images/" + imgsrc} alt="lung"></img>
+                    <p className="lung-item lung-txt">{info.days} days without smoking!</p>
                 </div>
                 <div className="perform-container">
-                    Hiiiiiiiiii
+                    <p className="perform-item">
+                       <b>Health Performance:</b><br />
+                       Oxygen Level: 100%<br />
+                       Carbon monoxide Level: 79%<br/>
+                       Nicotine Expelled from Body: 47%<br /> 
+                    </p>
+                    <button className="smoke-btn" onClick={restart}>I Smoked :(</button>
                 </div>
 
             </div>
