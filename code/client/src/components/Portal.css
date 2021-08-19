@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap');
+
+.portal-background{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+.portal-container{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(146, 146, 146);
+    width: 60vw;
+    padding: 2rem;
+    border-radius: 3px;
+    box-shadow: 1px 1px 10px #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fa-times{
+    position: fixed;
+    top: 1%;
+    left: 1%;
+}
+.portal-container img{
+    object-fit: contain;
+    width: 50vw;
+}
+.portal-txt{
+    font-family: 'Waiting for the Sunrise', cursive;
+    margin: 1em;
+}
+@media screen and (min-width: 768px){
+    .portal-container img{
+        width: 30vw;
+    }
+    .portal-container{
+        width: 40vw;
+    }
+}

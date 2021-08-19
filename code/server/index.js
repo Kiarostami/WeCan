@@ -34,6 +34,12 @@ app.post("/api/insert", (req, res) => {
         res.send(result);
     });
 });
+app.put("/api/update", (req, res) => {
+    const sqlUpdate = "UPDATE users SET startDay = ? WHERE username = ?";
+    db.query(sqlUpdate, [req.body.startDay, req.body.username], (err, result) =>{
+        res.send(result);
+    });
+});
 app.listen(3001, () => {
     console.log("running")
 });

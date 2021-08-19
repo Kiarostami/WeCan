@@ -19,10 +19,10 @@ function Login() {
         }
         else{
             setCheckuser(true);
-            info.setGname(users[0].username);
-            info.setGemail(users[0].email);
-            info.setGstart(users[0].startDay);
-            let sDay = Date.parse(users[0].startDay);
+            info.setGname(match[0].username);
+            info.setGemail(match[0].email);
+            info.setGstart(match[0].startDay);
+            let sDay = Date.parse(match[0].startDay);
             let today = new Date();
             let y = today.getFullYear();
             let m = today.getMonth() + 1;

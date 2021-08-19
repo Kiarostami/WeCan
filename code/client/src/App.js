@@ -20,8 +20,6 @@ function App() {
   useEffect(()=>{Axios.get("http://localhost:3001/api/get").then((response) => {
                 setUsers(response.data);})
   }, []);
-  console.log("ok")
-  console.log(users);
   return (
     <AppContext.Provider value={userInfo}>
       <div className="App">

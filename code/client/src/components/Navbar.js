@@ -22,7 +22,7 @@ function Navbar() {
                     <Link to="/">
                         <li className="nav-item">
                             <i className="fa fa-wallet"></i>
-                            Wallet
+                            Savings
                         </li>
                     </Link>
                     <Link to="/">

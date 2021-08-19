@@ -2,11 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    height: 100vh;
 }
 .lung-container{
     max-width: 70%;
-    margin-left: 20%;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .lung-img{
     max-width: 90%;
@@ -16,6 +20,20 @@
     margin-top: 2%;
     font-size: 1.5rem;
 }
+.btns{
+    margin-top: 5%;
+    border: 3px solid black;
+    border-radius: 8px;
+    
+}
+.option-btn{
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    font-size: 2em;
+    transition: all ease 0.7s;
+}
+.option-btn:hover{
+    color: #eee;
+}
 .perform-container{
     display: flex;
     flex-direction: column;
@@ -23,7 +41,7 @@
     padding: 3%;
     font-size: 1.5em;
     text-align: left;
-    margin: 15% 5% 5% 15%;
+    margin: 10% 5% 5% 15%;
     border-radius: 8px;
     background-color: rgba(238, 238, 238, 0.61);
 }
