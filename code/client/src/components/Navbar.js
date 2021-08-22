@@ -7,7 +7,7 @@ function Navbar() {
         <>
             <div className="nav-container">
                 <ul className="nav-items">
-                    <Link to="/">
+                    <Link to="/profile">
                         <li className="nav-item">
                             <i className="fa fa-user"></i>
                             Profile

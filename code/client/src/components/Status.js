@@ -40,8 +40,6 @@ function Status() {
         info.setGstart(new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate());
         info.setGdays(0);
     }
-    console.log(info.name);
-    console.log(info.days);
     return (
         <div>
             <div className="stat-container" style={{backgroundColor: backColor}}>
@@ -57,7 +55,7 @@ function Status() {
                             setIsOpen(true);
                             }
                         }></i>
-                        <i class="fas fa-trash option-btn" onClick = {() => {
+                        <i className="fas fa-trash option-btn" onClick = {() => {
                             setCigInfo({
                                 cigsrc: "trash.png",
                                 cigtxt: "Perfect! Stay here bad boy!"
@@ -65,7 +63,7 @@ function Status() {
                             setIsOpen(true);
                             }
                         }></i>
-                        <i class="fab fa-gripfire option-btn" onClick = {() => {
+                        <i className="fab fa-gripfire option-btn" onClick = {() => {
                             setCigInfo({
                                 cigsrc: "fire.png",
                                 cigtxt: "Nice! Burn honey! Burn!"

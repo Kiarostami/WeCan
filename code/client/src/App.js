@@ -7,6 +7,7 @@ import RegisterPage from './pages/RegisterPage'
 import { useState, useEffect } from 'react';
 import AppContext from './components/AppContext';
 import Axios from 'axios';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -29,6 +30,7 @@ function App() {
             <Route path="/login" exact component={LoginPage}></Route>
             <Route path="/start" exact component={MainPage}></Route>
             <Route path="/register" exact component={RegisterPage}></Route>
+            <Route path="/profile" exact component={ProfilePage}></Route>
           </Switch>
         </BrowserRouter>
       </div>

@@ -1,0 +1,36 @@
+.prof-back{
+    background-color: #0e4675;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.prof-container{
+    background-color: #F5B7C4;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 8px;
+}
+.prof-item{
+    margin: 1em;
+}
+.prof-info img{
+    max-width: 20vw;
+    border-radius: 50%;
+}
+.prof-track{
+    background-color: rgba(238, 238, 238, 0.479);
+    padding: 1em;
+    border-radius: 8px;
+    font-size: 1.2em;
+}
+.green{
+    color: green;
+}
+.orange{
+    color: rgb(182, 118, 0);
+}
