@@ -1,4 +1,3 @@
-import React from 'react'
 import AppContext from './AppContext';
 import { useContext } from 'react';
 
@@ -28,16 +27,16 @@ function CalculateDays() {
         years: false
     };
     info.users.forEach( (user) => {
-        if(user.username != info.name){
+        if(user.username !== info.name){
             let sDay = Date.parse(user.startDay);
             let days = (Math.ceil((cDay - sDay) / (1000 * 60 * 60 * 24)));
-            if(days == 1){
+            if(days >= 1 && days < 7){
                 dayClasses.oneDay += 1;
-            } else if(days >= 7 && days < 14){
+            } else if(days >= 7 && days < 30){
                 dayClasses.oneWeek += 1;
-            } else if(days >= 30 && days < 60){
+            } else if(days >= 30 && days < 182){
                 dayClasses.oneMonth += 1;
-            } else if(days >= 182 && days < 212){
+            } else if(days >= 182 && days < 365){
                 dayClasses.sixMonths += 1;
             } else if(days >= 365 && days < 730){
                 dayClasses.oneYear += 1;

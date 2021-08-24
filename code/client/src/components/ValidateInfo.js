@@ -1,18 +1,16 @@
 import validator from 'validator';
-import AppContext from './AppContext';
-import { useContext } from 'react';
 
 function ValidateInfo(values, users){
     let errors = {};
     if(!values.username.trim()) {
         errors.username = "Username required";
-    } else if((users.filter((user) => (user.username === values.username.trim()))).length != 0 ){
+    } else if((users.filter((user) => (user.username === values.username.trim()))).length !== 0 ){
         errors.username = "Username already exists"
     }
 
     if(!values.email) {
         errors.email = "Email required";
-    } else if((users.filter((user) => (user.email === values.email))).length != 0 ){
+    } else if((users.filter((user) => (user.email === values.email))).length !== 0 ){
         errors.email = "Username with this email already exists"
     } else if(!validator.isEmail(values.email)){
         errors.email = "Email is not valid"

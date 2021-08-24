@@ -13,25 +13,25 @@ function Navbar() {
                             Profile
                         </li>
                     </Link>
-                    <Link to="/">
+                    <Link to="/rewards">
                         <li className="nav-item">
                             <i className="fa fa-trophy"></i>
                             Rewards
                         </li>
                     </Link>
-                    <Link to="/">
+                    <Link to="/savings">
                         <li className="nav-item">
                             <i className="fa fa-wallet"></i>
                             Savings
                         </li>
                     </Link>
-                    <Link to="/">
+                    <Link to="/stories">
                         <li className="nav-item">
                             <i className="fa fa-comment"></i>
                             Daily Stories
                         </li>
                     </Link>
-                    <Link to="/">
+                    <Link to="/about">
                         <li className="nav-item">
                             <i className="fa fa-info"></i>
                             About Us

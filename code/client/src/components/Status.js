@@ -31,7 +31,7 @@ function Status() {
             setImgsrc("healthy.png");
             setBackColor("#98F898");
         }
-    }, [info.startDay])
+    }, [info.startDay, info.days])
     const restart = () =>{
         Axios.put("http://localhost:3001/api/update", {
             username: info.name,

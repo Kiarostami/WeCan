@@ -1,0 +1,56 @@
+.reward-back{
+    background-color: #0e4675;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.reward-container{
+    background-color: #F5B7C4;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    flex-direction: column;
+}
+.reward-item{
+    margin: 1em;
+    background-color: rgba(238, 238, 238, 0.479);
+    padding: 1em;
+    border-radius: 8px;
+    font-size: 1.2em;
+    flex: 70%;
+    max-height: 50vw;
+    overflow-y: auto;
+}
+.fa-medal{
+    float: left;
+    margin-right: 0.5em;
+    opacity: 0.5;
+}
+.fa-trophy.gold , .fa-trophy.grey{
+    float: right;
+    opacity: 1;
+    color: #999;
+    margin-left: 1em;
+}
+.gold{
+    color: #e4c200 !important;
+}
+.reward-txt{
+    display: inline;
+}
+.reward-time-item:not(:first-of-type){
+    margin-top: 1em;
+}
+@media screen and (min-width: 1024px){
+    .reward-container{
+        flex-direction: row;
+    }
+    .reward-item{
+        flex: 40%;
+        
+    }
+}

@@ -22,7 +22,7 @@ const useForm = (ValidateInfo) => {
     const register = (e) => {
         e.preventDefault();
         setErrors(ValidateInfo(values, info.users));
-        if(Object.keys(errors).length != 0){
+        if(Object.keys(errors).length !== 0){
             Axios.post("http://localhost:3001/api/insert", {
                 username : values.username,
                 password : values.password,

@@ -11,7 +11,7 @@ function Profile() {
         <div className="prof-back">
             <div className="prof-container">
                 <div className="prof-item prof-info">
-                    <img src="images/profile.png" alt="profile image"/>
+                    <img src="images/profile.png" alt="profile"/>
                     <div className="info-container">
                         <h3 className="info-item">Username: {info.name}</h3>
                         <h3 className="info-item">Email: {info.email}</h3>
